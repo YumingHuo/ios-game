@@ -47,7 +47,7 @@ class Concentration {
     }
     
     init(numberOfPairsOfCards: Int) {
-        assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
+        assert(numberOfPairsOfCards > 0, "Concentration.init(\(numberOfPairsOfCards)): you must have at least one pair of cards")
         for identifier in 1...numberOfPairsOfCards {
             let card = Card(identifier: identifier)
             cards += [card, card]
