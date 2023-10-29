@@ -10,9 +10,8 @@ import Foundation
 struct Concentration {
     private(set) var cards = [Card]()
     
-    private var indexOdOneAndOnlyFaceUpCard: Int? {
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
-            let ch = "h".oneAndOnly
             return cards.indices.filter {cards[$0].isFaceUp}.oneAndOnly
 //            var foundIndex: Int?
 //            for index in cards.indices {
@@ -36,14 +35,14 @@ struct Concentration {
     mutating func chooseCard(at index: Int) {
         assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
         if !cards[index].IsMatched {
-            if let matchIndex = indexOdOneAndOnlyFaceUpCard, matchIndex != index {
+            if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 if cards[matchIndex] == cards[index] {
                     cards[matchIndex].IsMatched = true
                     cards[index].IsMatched = true
                 }
                 cards[index].isFaceUp = true
             }else {
-                indexOdOneAndOnlyFaceUpCard = index
+                indexOfOneAndOnlyFaceUpCard = index
             }
         }
     }
