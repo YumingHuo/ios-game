@@ -17,11 +17,25 @@ class ViewController: UIViewController {
     
     private(set)var flipCount = 0 {
         didSet{
-            flipCountLable.text = "Flips:\(flipCount)"
+            updateFlipCountLabel()
         }
     }
     
-    @IBOutlet private weak var flipCountLable: UILabel!
+    private func updateFlipCountLabel() {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .strokeWidth: 5.0,
+            .strokeColor: UIColor.orange
+        ]
+        let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
+        flipCountLable.attributedText = attributedString
+    }
+    
+    
+    @IBOutlet private weak var flipCountLable: UILabel! {
+        didSet {
+            updateFlipCountLabel()
+        }
+    }
     
     @IBOutlet private var cardButtons: [UIButton]!
     
