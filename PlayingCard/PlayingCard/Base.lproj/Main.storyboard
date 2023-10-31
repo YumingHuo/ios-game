@@ -17,17 +17,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rdi-O1-wpP" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                <rect key="frame" x="16" y="59" width="361" height="759"/>
+                                <rect key="frame" x="16" y="149.66666666666669" width="361" height="577.66666666666652"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rdi-O1-wpP" secondAttribute="height" multiplier="5:8" id="LKR-bI-kDP"/>
+                                    <constraint firstAttribute="width" priority="750" constant="800" id="RUN-xP-fTJ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rdi-O1-wpP" secondAttribute="bottom" id="0w3-cf-Iwg"/>
-                            <constraint firstItem="rdi-O1-wpP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OFu-v4-S5g"/>
-                            <constraint firstItem="rdi-O1-wpP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y7b-ap-ZYN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rdi-O1-wpP" secondAttribute="trailing" constant="16" id="phK-WR-lEz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rdi-O1-wpP" secondAttribute="bottom" constant="16" id="0w3-cf-Iwg"/>
+                            <constraint firstItem="rdi-O1-wpP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LbY-5A-H1y"/>
+                            <constraint firstItem="rdi-O1-wpP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OFu-v4-S5g"/>
+                            <constraint firstItem="rdi-O1-wpP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Y7b-ap-ZYN"/>
+                            <constraint firstItem="rdi-O1-wpP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cjv-4A-HfE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rdi-O1-wpP" secondAttribute="trailing" constant="16" id="phK-WR-lEz"/>
                         </constraints>
                     </view>
                 </viewController>
