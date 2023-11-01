@@ -23,6 +23,11 @@
                                     <constraint firstAttribute="width" secondItem="rdi-O1-wpP" secondAttribute="height" multiplier="5:8" id="LKR-bI-kDP"/>
                                     <constraint firstAttribute="width" priority="750" constant="800" id="RUN-xP-fTJ"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
